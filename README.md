@@ -82,45 +82,71 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+_Covid-19_ sebagai epidemik menyebabkan kekhawatiran kepada masyarakat dunia, begitu juga masyarakat di Indonesia. Masyarakat memerlukan sebuah platform yang memudahkannya untuk mengakses informasi seputar _Covid-19_ dengan cepat dan informatif. Maka dibuatkan sebuah _dashboard_ visualisasi interaktif untuk menampilkan informasi _Covid-19_ seputar Kasus Positif, Kasus Kematian dan Kasus Sembuh berdasarkan Provinsi di Indonesia Tingkat Nasional. 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Data yang digunakan didapat dari [kaggle](https://www.kaggle.com/datasets/riqulaziz/case-vaccination-covid19-indonesia-dataset) berisi data _Covid-19_ di Indonesia. _Dashboard_ dibuat menggunakan aplikasi `Tableau Desktop`. _Dashboard_ dibuat interaktif berdasarkan 8 worksheet diantaranya Peta Kasus Positif, Total Kasus, Covid Perhari dan Kasus Pertahun. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+_Dashboard_ juga ditampilkan pada tableau public, sehingga masyarakat secara mudah bisa melihat _dashboard_ visualisasi hanya bermodalkan internet. _Dashboard_ dapat diakses secara publik melalui [tautan](s.stis.ac.id/dashboard_221910726) berikut.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
+<br/>
 
 
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Pada bagian ini akan dijabarkan berbagai _tools_ yang digunakan dalam pembuatan _dashboard_ visualisasi interaktif _Covid-19_.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Tableau](https://www.tableau.com/)
+* [Tableau Public](https://public.tableau.com/en-us/s/)
+* [Kaggle](https://www.kaggle.com/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+<br/>
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Pengumpulan Data
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Data dikumpulkan melalui situs [kaggle.com](https://www.kaggle.com/datasets/riqulaziz/case-vaccination-covid19-indonesia-dataset) yang menyediakan banyak _dataset_. Data yang diambil adalah data Kasus _Covid-19_ di Indonesia. Data ini memiliki 11 variabel diantaranya sebagai berikut.
+
+| Variabel | Tipe Data |
+| --- | --- |
+| `date` | _Date_ |
+| `province` | _Categorical_ |
+| `daily case` | _Integer_ |
+| `daily death` | _Integer_ |
+| `daily recovered` | _Integer_ |
+| `active case` | _Integer_ |
+| `cumulative case` | _Integer_ |
+| `cumulative death` | _Integer_ |
+| `cumulative recovered` | _Integer_ |
+| `cumulative active case` | _Integer_ |
+
+<br/>
+
+## Pre-processing Data
+
+Data yang dikumpulkan tidak sepenuhnya bisa menampilkan visualisasi yang diinginkan. Perlu dilakukan pra-pemrosesan data agar visualisasi data dapat dilakukan semestinya. Dalam membuat peta tematik, memerlukan sebuah variabel `longitude` dan `latitude` yang di-generate agar menampilkan peta dunia. 
+
+Selanjutnya, variabel provinsi memiliki 34 kategori yang unik didalamnya. Salah satu kategorinya yaitu _Daerah Istimewa Yogyakarta_. Kategori ini tidak terdeteksi oleh `latitude` dan `longitude` yang di-generate dikarenakan penamaan kategori tidak sesuai dengan semestinya yaitu _DI Yogyakarta_. Maka dari itu, dengan software _tableau desktop_, kami gantikan kategori _Daerah Istimewa Yogyakarta_ menjadi _DI Yogyakarta_. Sehingga peta tematik bisa dibuat untuk seluruh provinsi di Indonesia.
+
+<br/>
+
+## Visualisasi Data
+
+### Peta Kasus Positif
+
+Visualisasi data ini menampilkan peta tematik berdasarkan jumlah kasus kumulatif positif Covid-19. Peta ini ditampilkan melalui variabel _latitude_ yang diletakkan di bagian _rows_ dan _longitude_ yang diletakkan di bagian _columns_.
+
+Berikutnya, variabel 'province' diletakkan ke menu marks sebagai _tooltip_, sehingga jika provinsi di Indonesia di-_hover_ maka akan memberikan memberikan keterangan nama provinsi dan total kasus per provinsi.
+
+Selanjutnya meletakkan variabel `Cumulative Case` ke menu _marks_ dengan ukuran jumlah kasus kumulatif sebagai _color_. Hal ini akan memberikan warna pada tiap provinsi berdasarkan total kasus positifnya.
+
+<div>
+  <img src="images/peta-tematik.png" alt="Peta Tematik">
+</div>
+
+<br/>
 
 ### Prerequisites
 
