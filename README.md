@@ -17,12 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -33,19 +27,19 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Dashboard Covid-19</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Visualisasi Dashboard Interaktif Untuk Pemantauan Kasus Covid-19 di Tingkat Nasional Menggunakan Aplikasi Tableau
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://s.stis.ac.id/dashboard_221910726"><strong>Explore the dashboard »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://s.stis.ac.id/dashboard_221910726">Dashboard</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/hafidz-sani/dashboard-covid19">Github</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Docs</a>
   </p>
 </div>
 
@@ -56,31 +50,36 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#abstrak">Abstrak</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#pengumpulan-data">Pengumpulan Data</a></li>
+    <li><a href="#pre-processing-data">Pre-processing Data</a></li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#visualisasi-data">Visualisasi Data</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#peta-kasus-positif">Peta Kasus Positid</a></li>
+        <li><a href="#total-kasus">Total Kasus</a></li>
+        <li><a href="#tren-covid-perhari">Tren Covid Perhari</a></li>
+        <li><a href="#kasus-pertahun">Kasus Pertahun</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#pembuatan-dashboard-interaktif">Pembuatan Dashboard Interaktif</a>
+      <ul>
+        <li><a href="#action-filter-:-filtering-by-map">Action Filter : Filtering by Map</a></li>
+        <li><a href="#tableau-public">Tableau Public</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Abstrak
 
 _Covid-19_ sebagai epidemik menyebabkan kekhawatiran kepada masyarakat dunia, begitu juga masyarakat di Indonesia. Masyarakat memerlukan sebuah platform yang memudahkannya untuk mengakses informasi seputar _Covid-19_ dengan cepat dan informatif. Maka dibuatkan sebuah _dashboard_ visualisasi interaktif untuk menampilkan informasi _Covid-19_ seputar Kasus Positif, Kasus Kematian dan Kasus Sembuh berdasarkan Provinsi di Indonesia Tingkat Nasional. 
 
@@ -148,132 +147,71 @@ Selanjutnya meletakkan variabel `Cumulative Case` ke menu _marks_ dengan ukuran 
 
 <br/>
 
-### Prerequisites
+### Total Kasus
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Teks sederhana dapati ditampilkan dengan menyeret variabel `Cumulative Case` ke menu _marks_ sebagai _text_. Sehingga, menampilkan total kasus positif Covid-19 berbentuk teks. Teks sederhana ini juga menampilkan total kasus meninggal dan total kasus yang sembuh, sehingga dibuat menjadi 3 _worksheet_.
 
-### Installation
+<div>
+  <img src="images/Teks-Visualisasi.png" alt="Peta Tematik">
+</div>
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+<br/>
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+### Tren Covid Perhari
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Grafik garis ditujukan untuk menampilkan tren kasus Covid-19. Untuk menampilkannya, pertama, meletakkan variabel Date ke bagian columns dan mengaturnya dalam day. Lalu meletakkan variabel Daily Case, Daily Death dan Daily Recovered ke bagain rows dan mengatur ukurannya kedalam jumlah. Grafik garis diberikan 3 warna berbeda diantaranya biru menandakan kasus positif, merah menandakan kasus kematian dan hijau menandakan kasus sembuh.
 
+<div>
+  <img src="images/covid-perhari.png" alt="Peta Tematik">
+</div>
 
+<br/>
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### Kasus Pertahun
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Untuk menggambarkan kasus positif, meninggal dan sembuh per tahun dapat menggunakan _bar chart_. _Bar chart_ sesuai digunakan dalam melakukan komparasi nilai berdasarkan kategori. 
+Untuk menampilkannya, awalnya menyeret variabel `Date` ke bagian _columns_ dalam ukuran tahun. Lalu menyeret variabel `Daily Case` ke bagian _rows_ berdasarkan jumlah. Sehingga dihasilkan grafik batang dengan dua kategori yaitu 2020 dan 2021. Visualisasi ini diterapkan juga untuk kasus meninggal dan kasus sembuh.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<div>
+  <img src="images/kasus-pertahun.png" alt="Bar Chart">
+</div>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<br/>
 
+## Pembuatan Dashboard Interaktif
 
+_Dashboard_ dibuat dengan judul _Dashboard_ _Covid-19_ di Indonesia per Provinsi (Kasus Positif, Kasus Kematian dan Kasus Sembuh). _Dashboard_ dibuat dengan ukuran _fixed_ dan _Custom_ dimana lebarnya 1000px dan tingginya 1200px.
 
-<!-- ROADMAP -->
-## Roadmap
+Sebelumnya telah dibuat sebanyak 8 _worksheet_ diantaranya yaitu Peta Kasus Positif yang ditampilkan dalam peta tematik, Total Kasus Positif, Total Meninggal Dunia dan Total Sembuh yang ditampilkan dalam Teks Sederhana, Covid-19 Perhari yang ditampilkan dalam _line chart_ serta Kasus Pertahun, Kematian Pertahun dan Kesembuhan Pertahun yang ditampilkan dalam _bar chart_. Setelah 8 _worksheet_ dibuat, _dashboard_ bisa dibuat dengan menggabungkan kedelapan _worksheet_ tersebut.
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+<div>
+  <img src="images/dashboard-1.png" alt="Bar Chart">
+</div>
+<div>
+  <img src="images/dashboard-2.png" alt="Bar Chart">
+</div>
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+<br/>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Action Filter : Filtering by Map
 
+Peta juga ditambahkan _actions_ yang diberi nama `Filtering by Map`. _Action_ ini berguna untuk memberikan _filter_ berdasarkan provinsi yang diklik pada peta. Setiap provinsi yang dipilih di peta, maka seluruh visualisasi data akan menyesuaikan berdasarkan provinsi yang dipilih. Sehingga memudahkan pengguna dalam mencari informasi per provinsinya.
 
+<div>
+  <img src="images/action-filter.png" alt="Bar Chart">
+</div>
 
-<!-- CONTRIBUTING -->
-## Contributing
+<br/>
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Tableau Public
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+Untuk melihat secara langsung _dashboard_ yang telah dibuat, maka akan ditampilkan dalam situs yang disediakan **tableau** secara gratis, yaitu **tableau public**. Untuk mengakses _dashboard_ dapat melalui [s.stis.ac.id/dashboard_221910726](https://s.stis.ac.id/dashboard_221910726).
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Muhamad Al Hafidz Sani - [@hafidzsani39](https://www.linkedin.com/in/hafidzsani39/) - 221910726@stis.ac.id
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/hafidz-sani/dashboard-covid19](https://github.com/hafidz-sani/dashboard-covid19)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
