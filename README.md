@@ -39,7 +39,7 @@
     ·
     <a href="https://github.com/hafidz-sani/dashboard-covid19">Github</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Docs</a>
+    <a href="https://drive.google.com/file/d/1W7SWxq6RDZHiJFSYvFjRI7GezELk4pCV/view?usp=sharing">Docs</a>
   </p>
 </div>
 
@@ -85,7 +85,7 @@ _Covid-19_ sebagai epidemik menyebabkan kekhawatiran kepada masyarakat dunia, be
 
 Data yang digunakan didapat dari [kaggle](https://www.kaggle.com/datasets/riqulaziz/case-vaccination-covid19-indonesia-dataset) berisi data _Covid-19_ di Indonesia. _Dashboard_ dibuat menggunakan aplikasi `Tableau Desktop`. _Dashboard_ dibuat interaktif berdasarkan 8 worksheet diantaranya Peta Kasus Positif, Total Kasus, Covid Perhari dan Kasus Pertahun. 
 
-_Dashboard_ juga ditampilkan pada tableau public, sehingga masyarakat secara mudah bisa melihat _dashboard_ visualisasi hanya bermodalkan internet. _Dashboard_ dapat diakses secara publik melalui [tautan](s.stis.ac.id/dashboard_221910726) berikut.
+_Dashboard_ juga ditampilkan pada tableau public, sehingga masyarakat secara mudah bisa melihat _dashboard_ visualisasi hanya bermodalkan internet. _Dashboard_ dapat diakses secara publik melalui [tautan](https://s.stis.ac.id/dashboard_221910726) berikut.
 
 <!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 <br/>
